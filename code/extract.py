@@ -1,6 +1,6 @@
 import PyPDF2
-file_name = "<PDF NAME>.pdf"
-PDFFile = open(file_name,'rb')
+file_name = "ARRAYS.pdf"
+PDFFile = open('../pdfs/' + file_name,'rb')
 
 PDF = PyPDF2.PdfFileReader(PDFFile)
 pages = PDF.getNumPages()
@@ -22,11 +22,11 @@ for page in range(pages):
             if uri in u[ank].keys():
                 qu.append(u[ank][uri])
 
-set = open('md/'+file_name.split(".pdf")[0]+'.md','r')
+set = open('../md/'+file_name.split(".pdf")[0]+'.md','r')
 lines = set.readlines()
 for line in lines:
     nil.append(line)
-set = open('md/'+file_name.split(".pdf")[0]+'.md','w')
+set = open('../md/'+file_name.split(".pdf")[0]+'.md','w')
 
 for i in range(len(nil)):
     set.write('['+nil[i]+']('+qu[i]+')\n\n')
