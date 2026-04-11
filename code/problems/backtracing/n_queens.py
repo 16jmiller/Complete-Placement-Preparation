@@ -10,3 +10,9 @@
 # –  –  –  –  –  –  Q  – 
 # –  Q  –  –  –  –  –  – 
 # –  –  –  Q  –  –  –  –
+
+def n_queens(n):
+    return n
+
+if __name__ == '__main__': 
+    n_queens(7)
